@@ -29,7 +29,6 @@ function setup(app){
             var payload = {data:{}};
             var book = result.GoodreadsResponse.reviews[0].review;
             if(book.length > 0){
-              console.log(book[0].book[0]);
               payload.data = {
                 title: book[0].book[0].title[0],
                 url: book[0].book[0].link[0],
