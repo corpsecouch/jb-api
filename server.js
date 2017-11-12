@@ -89,6 +89,11 @@ app.get('/pagecount', function (req, res) {
   }
 });
 
+app.get('/health', function(req, res){
+  res.writeHead(200);
+  res.end();
+});
+
 // error handling
 app.use(function(err, req, res, next){
   console.error(err.stack);
