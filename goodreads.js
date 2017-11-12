@@ -32,7 +32,7 @@ function setup(app){
               payload.data = {
                 title: book[0].book[0].title[0],
                 url: book[0].book[0].link[0],
-                src: book[0].book[0].image_url[0]
+                src: book[0].book[0].image_url[0].replace(/(.*books\/)(.*)m(.*)/, '$1$2l$3')
               };
             }
 
@@ -130,7 +130,7 @@ function setup(app){
               payload.data.push({
                 title: book[i].book[0].title[0],
                 url: book[i].book[0].link[0],
-                src: book[i].book[0].image_url[0]
+                src: book[0].book[0].image_url[0].replace(/(.*books\/)(.*)m(.*)/, '$1$2l$3')
               });
             }
 
